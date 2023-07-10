@@ -34,15 +34,35 @@ struct LoginView: View {
             
             VStack(alignment: .leading, spacing: 30) {
                 VStack {
-                    TextField("Phone", text: self.$viewModel.phone)
-                        .padding()
-                        .background(Color.themeTextField)
-                        .cornerRadius(20.0)
-                        .shadow(radius: 10.0, x: 20, y: 10)
-                        .textContentType(.telephoneNumber)
-                        .keyboardType(.phonePad)
                     HStack {
-                        Text(phoneErrorText).padding(.leading, 25)
+                        
+                        VStack {
+                            
+                            Button {
+                                // Need to add json for telephone code before providing access to this button
+                            } label: {
+                                HStack {
+                                    Text(self.viewModel.getFlag())
+                                    Text("+91")
+                                        .foregroundColor(.black)
+                                }
+                            }
+
+                            
+                        }.frame(width: 80, height: 54)
+                            .background(Color.themeTextField)
+                            .cornerRadius(20)
+                            .shadow(radius: 10.0, x: 20, y: 10)
+                        TextField("Phone", text: self.$viewModel.phone)
+                            .padding()
+                            .background(Color.themeTextField)
+                            .cornerRadius(20.0)
+                            .shadow(radius: 10.0, x: 20, y: 10)
+                            .textContentType(.telephoneNumber)
+                        .keyboardType(.phonePad)
+                    }
+                    HStack {
+                        Text(phoneErrorText).padding(.leading, 105)
                             .font(.caption).fontWeight(.bold)
                             .foregroundColor(.red)
                         Spacer()
@@ -130,6 +150,9 @@ struct LoginView: View {
             self.passwordErrorText = newValue.isValidPassword
             ? ""
             : "Password should be more than 5 characters long"
+        }
+        .onAppear {
+            self.viewModel.getCountryCodes()
         }
         
     }

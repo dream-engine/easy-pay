@@ -15,6 +15,7 @@
 		E6C1449E2A5C595A008825AD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1449D2A5C595A008825AD /* LoginViewModel.swift */; };
 		E6C144A22A5C59D5008825AD /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C144A12A5C59D5008825AD /* Validations.swift */; };
 		E6C144A42A5C65B7008825AD /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C144A32A5C65B7008825AD /* LoginHelper.swift */; };
+		E6C144A62A5C68EF008825AD /* CountryCodeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C144A52A5C68EF008825AD /* CountryCodeListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E6C1449D2A5C595A008825AD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E6C144A12A5C59D5008825AD /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		E6C144A32A5C65B7008825AD /* LoginHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
+		E6C144A52A5C68EF008825AD /* CountryCodeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C144992A5C5870008825AD /* LoginView.swift */,
+				E6C144A52A5C68EF008825AD /* CountryCodeListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C144A62A5C68EF008825AD /* CountryCodeListView.swift in Sources */,
 				E6C1449E2A5C595A008825AD /* LoginViewModel.swift in Sources */,
 				E6C1449A2A5C5870008825AD /* LoginView.swift in Sources */,
 				E6C1448C2A5C568A008825AD /* ContentView.swift in Sources */,
