@@ -11,7 +11,9 @@ class LoginViewModel: ObservableObject {
     @Published var phone: String = ""
     @Published var password: String = ""
     
-    @Published var defaultCountryCode: String = "IN"
+    @Published var selectedCountryCode: String = "IN"
+    
+    @Published var showCountryCodeList: Bool = false
     
     init() {}
     
@@ -25,8 +27,14 @@ class LoginViewModel: ObservableObject {
     }
     
     
-    func getFlag() -> String {
-        return String(String.UnicodeScalarView(self.defaultCountryCode.unicodeScalars.compactMap {
+    func getSelectedFlag() -> String {
+        return String(String.UnicodeScalarView(self.selectedCountryCode.unicodeScalars.compactMap {
+            UnicodeScalar(127397 + $0.value)
+          }))
+    }
+    
+    func getFlag(forCountryCode code: String) -> String {
+        return String(String.UnicodeScalarView(code.unicodeScalars.compactMap {
             UnicodeScalar(127397 + $0.value)
           }))
     }

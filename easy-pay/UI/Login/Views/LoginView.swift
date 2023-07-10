@@ -16,6 +16,8 @@ struct LoginView: View {
     @State var phoneErrorText: String = ""
     @State var passwordErrorText: String = ""
     
+    
+    
     // MARK: - View
     var body: some View {
         VStack() {
@@ -39,13 +41,16 @@ struct LoginView: View {
                         VStack {
                             
                             Button {
-                                // Need to add json for telephone code before providing access to this button
+                                self.viewModel.showCountryCodeList = true
                             } label: {
                                 HStack {
-                                    Text(self.viewModel.getFlag())
+                                    Text(self.viewModel.getSelectedFlag())
                                     Text("+91")
                                         .foregroundColor(.black)
                                 }
+                            }
+                            .sheet(isPresented: self.$viewModel.showCountryCodeList) {
+                                self.countryCodeListView
                             }
 
                             
@@ -155,6 +160,22 @@ struct LoginView: View {
             self.viewModel.getCountryCodes()
         }
         
+    }
+    
+    var countryCodeListView: some View {
+        NavigationView {
+            CountryCodeListView(loginViewModel: self.viewModel)
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button {
+                            self.viewModel.showCountryCodeList = false
+                        } label: {
+                            Text("Done")
+                        }
+
+                    }
+                }
+        }
     }
 }
 
