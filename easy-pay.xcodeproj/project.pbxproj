@@ -11,6 +11,9 @@
 		E6C1448C2A5C568A008825AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1448B2A5C568A008825AD /* ContentView.swift */; };
 		E6C1448E2A5C568D008825AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C1448D2A5C568D008825AD /* Assets.xcassets */; };
 		E6C144912A5C568D008825AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C144902A5C568D008825AD /* Preview Assets.xcassets */; };
+		E6C1449A2A5C5870008825AD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C144992A5C5870008825AD /* LoginView.swift */; };
+		E6C1449E2A5C595A008825AD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C1449D2A5C595A008825AD /* LoginViewModel.swift */; };
+		E6C144A22A5C59D5008825AD /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C144A12A5C59D5008825AD /* Validations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		E6C1448B2A5C568A008825AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E6C1448D2A5C568D008825AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6C144902A5C568D008825AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6C144992A5C5870008825AD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E6C1449D2A5C595A008825AD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E6C144A12A5C59D5008825AD /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		E6C144882A5C568A008825AD /* easy-pay */ = {
 			isa = PBXGroup;
 			children = (
+				E6C144A02A5C59C7008825AD /* Helpers */,
+				E6C144972A5C585B008825AD /* UI */,
 				E6C144892A5C568A008825AD /* easy_payApp.swift */,
 				E6C1448B2A5C568A008825AD /* ContentView.swift */,
 				E6C1448D2A5C568D008825AD /* Assets.xcassets */,
@@ -65,6 +73,55 @@
 				E6C144902A5C568D008825AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6C144972A5C585B008825AD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E6C144982A5C5861008825AD /* Login */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E6C144982A5C5861008825AD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E6C1449F2A5C59B0008825AD /* LoginHelpers */,
+				E6C1449C2A5C594C008825AD /* Views */,
+				E6C1449B2A5C5946008825AD /* ViewModels */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E6C1449B2A5C5946008825AD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E6C1449D2A5C595A008825AD /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E6C1449C2A5C594C008825AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6C144992A5C5870008825AD /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E6C1449F2A5C59B0008825AD /* LoginHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginHelpers;
+			sourceTree = "<group>";
+		};
+		E6C144A02A5C59C7008825AD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E6C144A12A5C59D5008825AD /* Validations.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C1449E2A5C595A008825AD /* LoginViewModel.swift in Sources */,
+				E6C1449A2A5C5870008825AD /* LoginView.swift in Sources */,
 				E6C1448C2A5C568A008825AD /* ContentView.swift in Sources */,
 				E6C1448A2A5C568A008825AD /* easy_payApp.swift in Sources */,
+				E6C144A22A5C59D5008825AD /* Validations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
